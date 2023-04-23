@@ -5,6 +5,11 @@ sleep 30
 #clean project dir
 rm -rf generated/* var/* app/etc/env.php app/etc/config.php
 
+#symlink
+cd /var/www/magento2ce/magento2ee/dev/tools
+php -f build-ee.php -- --ce-source=/var/www/magento2ce/ --ee-source=/var/www/magento2ce/magento2ee/ --command=link
+php -f build-ee.php -- --ce-source=/var/www/magento2ce/ --ee-source=/var/www/magento2ce/magento2b2b/ --command=link
+
 echo "$(date +"%T") Magento 2 Installation START"
 
 cd /var/www/magento2ce

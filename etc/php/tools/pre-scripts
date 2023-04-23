@@ -6,5 +6,5 @@ echo "Starting execution of custom pre-scripts!"
 
 # composer require opensearch-project/opensearch-php:2.0.0
 # composer update
-
+composer require openswoole/core:22.1.2
 echo "Custom pre-scripts completed successfully!"

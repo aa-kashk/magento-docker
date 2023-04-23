@@ -36,7 +36,7 @@ services:
       - "${DB_PORT}:3306"
     command: --default-authentication-plugin=mysql_native_password
   app:
-    image: yhoncharuk/swoole
+    image: aakashk597/swoole
     # to re-build image use the following docker file:
     # build:
     #   context: .
