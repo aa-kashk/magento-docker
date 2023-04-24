@@ -40,7 +40,7 @@ sync:
       defaultFileMode: 0666
       defaultDirectoryMode: 0777
   code:
-    alpha: "~/www/repos/magento2ce"
+    alpha: "~/www/repos/mainline"
     beta: "docker://app/var/www/magento2ce"
     mode: "two-way-resolved"
     ignore:

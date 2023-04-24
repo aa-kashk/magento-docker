@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-bin/magento config:set web/secure/base_url https://magento.test/
+bin/magento config:set web/secure/base_url https://mainline.test/
 bin/magento config:set web/seo/use_rewrites 1
 bin/magento config:set dev/template/allow_symlink 1
 bin/magento config:set admin/security/admin_account_sharing 1

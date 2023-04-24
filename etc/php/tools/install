@@ -5,6 +5,11 @@ sleep 30
 #clean project dir
 rm -rf generated/* var/* app/etc/env.php app/etc/config.php
 
+#symlink
+cd /var/www/magento2ce/magento2ee/dev/tools
+php -f build-ee.php -- --ce-source=/var/www/magento2ce/ --ee-source=/var/www/magento2ce/magento2ee/ --command=link
+
+
 echo "$(date +"%T") Magento 2 Installation START"
 
 cd /var/www/magento2ce
@@ -18,11 +23,11 @@ bin/magento setup:install \
    --admin-lastname=Admin \
    --admin-firstname=Admin \
    --admin-email=admin@magento.test \
-   --base-url=http://magento.test/ \
+   --base-url=http://mainline.test/ \
    --admin-user=${ADMIN_USER} \
    --admin-password=${ADMIN_PASSWORD} \
    --cleanup-database \
-   --db-host=db --db-name=magento --db-prefix= \
+   --db-host=db --db-name=mainline --db-prefix= \
    --search-engine="opensearch" \
    --opensearch-host=elastic --opensearch-port=${ELASTIC_PORT} \
    --elasticsearch-host=elastic --elasticsearch-port=${ELASTIC_PORT} \
